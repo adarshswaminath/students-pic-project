@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <section class="max-w-4xl p-6 mx-auto rounded-md shadow-md">
+        <h2 class="text-3xl font-semibold text-white capitalize ">Image Upload</h2>
+        <h2 class="text-xl font-semibold text-orange-400 capitalize ">{{ msg }}</h2>
+
+    
+        <form  method="post" action="upload" enctype="multipart/form-data">
+            <div class="grid grid-cols-1 gap-6 mt-4 ">
+                <div>
+                    <label class="text-white" for="email">Email</label>
+                    <input id="email" name="email" type="email" class="block w-full px-4 py-2 mt-2 text-white bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                </div>
+    
+                <div>
+                    <label class="text-white" for="reg-no">Your Register Number</label>
+                    <input id="reg-no" name="reg-no" type="text" class="block w-full px-4 py-2 mt-2 text-white bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                </div>
+    
+                <div>
+                    <label class="text-white" for="image">Upload Image</label>
+                    <input id="image" type="file" name="image" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                </div>
+
+                <div>
+                    <label class="text-white" for="about">About To Display</label>
+                    <input id="about" type="text" name="about" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                </div>
+            </div>
+    
+            <div class="flex justify-end mt-6">
+                <button class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Save</button>
+            </div>
+        </form>
+    </section>
+
+
+</body>
+</html>
