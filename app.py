@@ -3,7 +3,7 @@ import os
 from werkzeug.utils import secure_filename
 
 
-UPLOAD_FOLDER = "uploads"
+UPLOAD_FOLDER = "static"
 ALLOWED_EXTENSIONS = {"png",'jpg'}
 
 
@@ -18,7 +18,8 @@ app.secret_key = 'admin@!23'
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    image_names = os.listdir('static')
+    return render_template("index.html",image_name=image_names)
 
 
 @app.route("/upload")
@@ -50,11 +51,11 @@ def admin():
 def admin_auth():
     username = request.form['username']
     password = request.form['password']
-    if(username != 'admin' and password != 'password'):
+    if(username != 'admin' or password != 'password'):
         flash('Wrong Username and password')
         return render_template('admin.html')
     else:
-        return 'login success'
+        return render_template('dashboard.html')
 
 
 if __name__ == "__main__":
