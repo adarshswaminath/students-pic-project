@@ -19,6 +19,7 @@ app.secret_key = 'admin@!23'
 @app.route("/")
 def index():
     image_names = os.listdir('static')
+    print(image_names)
     return render_template("index.html",image_name=image_names)
 
 
